@@ -1,5 +1,6 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import soundFile from "../../public/budilnik.mp3";
 
 const iziToastOptions = {
   message: "Timer is stopped",
@@ -69,7 +70,6 @@ startBtn.addEventListener("click", () => {
       soundClick();
       intervalId = setInterval(() => {
         soundClick();
-        console.log("Bzzzzz");
       }, 10000);
     }
   }, 1000);
@@ -103,6 +103,6 @@ function convertFromHMS(h = 0, m = 0, s = 0) {
 
 function soundClick() {
   var audio = new Audio();
-  audio.src = "../../public/budilnik.mp3";
+  audio.src = soundFile;
   audio.autoplay = true;
 }
