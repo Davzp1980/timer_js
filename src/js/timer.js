@@ -102,6 +102,7 @@ function convertFromHMS(h = 0, m = 0, s = 0) {
 }
 
 function soundClick() {
+  console.log("Bzzz");
   var audio = new Audio();
   audio.src = soundFile;
   audio.autoplay = true;
