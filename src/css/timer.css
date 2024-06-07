@@ -1,0 +1,56 @@
+.h-one {
+  color: teal;
+  font-size: 60px;
+  letter-spacing: 2px;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.home-link {
+  display: block;
+  margin-bottom: 50px;
+}
+.timer-container {
+  border: 2px solid teal;
+
+  padding: 20px;
+  margin-left: 50px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-text {
+  font-size: 60px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.start-btn {
+  margin-right: 20px;
+}
+.start-btn,
+.stop-btn {
+  cursor: pointer;
+
+  border-radius: 4px;
+  width: 80px;
+  height: 40px;
+  background-color: aqua;
+}
+
+.input-time input {
+  width: 70px;
+}
+
+.start-btn:hover,
+.stop-btn:hover {
+  transform: scale(1.1);
+}
+
+.disabled {
+  background-color: gray;
+}
