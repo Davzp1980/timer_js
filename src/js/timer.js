@@ -1,5 +1,6 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import soundFile from "../../public/budilnik.mp3";
 
 const iziToastOptions = {
   message: "Timer is stopped",
@@ -66,13 +67,17 @@ startBtn.addEventListener("click", () => {
       clearTimeout(timerId);
       setBtn.disabled = false;
       iziToast.show(iziToastOptions);
+      soundClick();
+      intervalId = setInterval(() => {
+        soundClick();
+      }, 10000);
     }
   }, 1000);
 });
 
 stopBtn.addEventListener("click", () => {
   clearTimeout(timerId);
-
+  clearInterval(intervalId);
   setBtn.disabled = false;
   stopBtn.disabled = true;
   stopBtn.classList.add("disabled");
